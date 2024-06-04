@@ -1,0 +1,8 @@
+services:
+  api:
+    build: .
+    volumes:
+      - ./:/var/www/html
+    command: php -S 0.0.0.0:80
+    ports:
+      - ${LOCAL_PORT}:80
